@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/pages/home_page.dart';
+import 'package:quiz/pages/tela_inicial.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -7,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePage(),
+      home: tela_daniel(),
       debugShowCheckedModeBanner: false,
 
     );
