@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/pages/home_page.dart';
 import 'package:quiz/pages/tela_inicial.dart';
 
 class MyApp extends StatelessWidget {

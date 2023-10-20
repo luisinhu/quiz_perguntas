@@ -50,12 +50,15 @@ class _HomePageState extends State<HomePage> {
                       )
                       ),
                 SizedBox(height: 40,),
-                Center(child: Text(questao, style: const TextStyle(fontSize: 20))),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Center(child: Text(questao, style: const TextStyle(fontSize: 20))),
+                ),
                 SizedBox(height: 20),
                 Column(
                   children: List<Widget>.generate(answers.length, (index) {
                     return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(12.0),
                       child: GestureDetector(
                         onTap: () {
                           nextQuestion();
@@ -72,7 +75,10 @@ class _HomePageState extends State<HomePage> {
                             ),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(child: Text(answers[index])),
+                          child: Center(child: Text(answers[index], style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20
+                          ),)),
                         ),
                       ),
                     );
