@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/pages/result_screen.dart';
 import 'package:quiz/pages/tela_inicial.dart';
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

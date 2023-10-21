@@ -8,7 +8,7 @@ List quiz = [
       "Mordecai",
       "Rigby"
     ],
-    "alternativa_correta": 1,
+    "alternativa_correta": 0,
   },
   {
     // 2
@@ -19,7 +19,7 @@ List quiz = [
       "Dee Dee",
       "Johnny Bravo"
     ],
-    "alternativa_correta": 1,
+    "alternativa_correta": 0,
   },
   {
     // 3
@@ -30,7 +30,7 @@ List quiz = [
       "Florzinha",
       "Vaca e Frango"
     ],
-    "alternativa_correta": 2,
+    "alternativa_correta": 1,
   },
   {
     // 4
@@ -41,7 +41,7 @@ List quiz = [
       "Vilgax",
       "Hex"
     ],
-    "alternativa_correta": 2,
+    "alternativa_correta": 1,
   },
   {
     // 5
@@ -52,7 +52,7 @@ List quiz = [
       "Johnny Bravo",
       "Billy e Mandy"
     ],
-    "alternativa_correta": 1,
+    "alternativa_correta": 0,
   },
   {
     // 6
@@ -63,7 +63,7 @@ List quiz = [
       "Gumball",
       "Clarence"
     ],
-    "alternativa_correta": 1,
+    "alternativa_correta": 0,
   },
   {
     // 7
@@ -74,7 +74,7 @@ List quiz = [
       "Rigby",
       "Clarence"
     ],
-    "alternativa_correta": 2,
+    "alternativa_correta": 1,
   },
   {
     // 8
@@ -96,7 +96,7 @@ List quiz = [
       "Johnny Bravo",
       "Macaco Louco"
     ],
-    "alternativa_correta": 1,
+    "alternativa_correta": 0,
   },
   {
     // 10
@@ -107,6 +107,6 @@ List quiz = [
       "Johnny Bravo",
       "Dexter"
     ],
-    "alternativa_correta": 3,
+    "alternativa_correta": 2,
   },
 ];

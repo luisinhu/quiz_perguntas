@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/dados.dart'; 
+import 'package:quiz/dados.dart';
+import 'result_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,13 +11,34 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int currentQuestionIndex = 0;
-
+  int pontos = 0; 
   void nextQuestion() {
     if (currentQuestionIndex < quiz.length - 1) {
       setState(() {
         currentQuestionIndex++;
       });
+    } else {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => ResultadosScreen(
+            pontos: pontos,
+            totalPerguntas: quiz.length,
+          ),
+        ),
+      );
     }
+  }
+  void checkAnswer(int selectedAnswer) {
+    print("Alternativa selecionada: $selectedAnswer");
+    print("Alternativa correta: ${quiz[currentQuestionIndex]["alternativa_correta"]}");
+
+    if (selectedAnswer == quiz[currentQuestionIndex]["alternativa_correta"]) {
+      print("Resposta correta!");
+      pontos++;
+    } else {
+      print("Resposta incorreta.");
+    }
+    nextQuestion();
   }
 
   @override
@@ -46,13 +68,14 @@ class _HomePageState extends State<HomePage> {
                 Text('Questão ${currentQuestionIndex + 1}',
                     style: TextStyle(
                       fontSize: 30,
-                      color: Colors.white ,
-                      )
-                      ),
+                      color: Colors.white,
+                    ),
+                ),
                 SizedBox(height: 40,),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Center(child: Text(questao, style: const TextStyle(fontSize: 20))),
+                  child: Center(child: Text(questao, style: const TextStyle(fontSize: 20)),
+                ),
                 ),
                 SizedBox(height: 20),
                 Column(
@@ -61,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(12.0),
                       child: GestureDetector(
                         onTap: () {
-                          nextQuestion();
+                          checkAnswer(index);
                         },
                         child: Container(
                           width: 200,
@@ -77,11 +100,14 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: Center(child: Text(answers[index], style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20
-                          ),)),
+                            fontSize: 20,
+                          ),
+                          ),
                         ),
                       ),
+                      )
                     );
+                    
                   }),
                 ),
               ],
